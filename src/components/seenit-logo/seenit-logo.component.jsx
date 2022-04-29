@@ -1,11 +1,11 @@
-import { SeenitLogoContainer, SeenitLogoImage } from './seenit-logo.styles';
+import * as Styled from "./seenit-logo.styles";
 
 const SeenitLogo = () => {
-    return(
-        <SeenitLogoContainer>
-            <SeenitLogoImage />
-        </SeenitLogoContainer>
-    )
-}
+  return (
+    <Styled.SeenitLogoContainer>
+      <Styled.SeenitLogoImage />
+    </Styled.SeenitLogoContainer>
+  );
+};
 
 export default SeenitLogo;

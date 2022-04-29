@@ -1,11 +1,4 @@
-import {
-  NavigationContainer,
-  NavLinks,
-  NavLink,
-  MenuIcon,
-  MenuIconContainer,
-  NavItem,
-} from "./navigation.styles";
+import * as Styled from "./navigation.styles";
 import { Outlet } from "react-router-dom";
 import Button, {
   BUTTON_TYPE_CLASSES,
@@ -26,26 +19,26 @@ const Navigation = () => {
 
   return (
     <>
-      <NavigationContainer>
+      <Styled.NavigationContainer>
         <Logo />
-        <MenuIconContainer onClick={handleClick}>
-          <MenuIcon className={click ? "fas fa-times" : "fas fa-bars"} />
-        </MenuIconContainer>
+        <Styled.MenuIconContainer onClick={handleClick}>
+          <Styled.MenuIcon className={click ? "fas fa-times" : "fas fa-bars"} />
+        </Styled.MenuIconContainer>
 
-        <NavLinks isClicked={click}>
-          <NavItem>
-            <NavLink to="/about" onClick={closeDropdown}>
+        <Styled.NavLinks isClicked={click}>
+          <Styled.NavItem>
+            <Styled.NavLink to="/about" onClick={closeDropdown}>
               ABOUT ME
-            </NavLink>
-          </NavItem>
+            </Styled.NavLink>
+          </Styled.NavItem>
 
-          <NavItem>
-            <NavLink to="/videos" onClick={closeDropdown}>
+          <Styled.NavItem>
+            <Styled.NavLink to="/videos" onClick={closeDropdown}>
               VIDEOS
-            </NavLink>
-          </NavItem>
+            </Styled.NavLink>
+          </Styled.NavItem>
 
-          <NavItem
+          <Styled.NavItem
             onClick={() => navigator.clipboard.writeText("james@seenit.io")}
           >
             {
@@ -55,13 +48,13 @@ const Navigation = () => {
                     CONTACT ME
                   </Button>
                 ) : (
-                  <NavLink as="span">CONTACT ME</NavLink>
+                  <Styled.NavLink as="span">CONTACT ME</Styled.NavLink>
                 )}
               </Link>
             }
-          </NavItem>
-        </NavLinks>
-      </NavigationContainer>
+          </Styled.NavItem>
+        </Styled.NavLinks>
+      </Styled.NavigationContainer>
       <Outlet />
       <Footer />
     </>

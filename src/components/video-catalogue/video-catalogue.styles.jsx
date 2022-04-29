@@ -1,7 +1,15 @@
 import styled from "styled-components";
 import ReactPlayer from "react-player/lazy";
 import Modal from "react-modal";
+import { Carousel } from "react-responsive-carousel";
 Modal.defaultStyles.overlay.backgroundColor = "rgba(0, 0, 0, 0.75)";
+
+export const CarouselStyled = styled(Carousel)`
+  margin-top: 40px;
+  & .slide.selected {
+    /* min-width: 150%; */
+  }
+`;
 
 export const VideoCatalogueContainer = styled.div`
   margin-top: 30px;
